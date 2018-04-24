@@ -16,9 +16,9 @@ Completed 200 OK in 15ms (Views: 2.4ms)
 
 
 Started DELETE "/tweets/1" for 127.0.0.1 at 2018-04-24 13:28:28 -0600
-  
+
 ActionController::RoutingError (No route matches [DELETE] "/tweets/1"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
@@ -47,9 +47,9 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started DELETE "/players/1" for 127.0.0.1 at 2018-04-24 13:28:38 -0600
-  
+
 ActionController::RoutingError (No route matches [DELETE] "/players/1"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
@@ -83,12 +83,12 @@ Processing by PlayerController#delete as */*
 Completed 500 Internal Server Error in 4ms
 
 
-  
+
 PG::SyntaxError (ERROR:  syntax error at or near "*"
 LINE 1: DELETE * FROM player WHERE id=1;
                ^
 ):
-  
+
 app/models/player.rb:43:in `exec'
 app/models/player.rb:43:in `delete'
 app/controllers/player_controller.rb:21:in `delete'
@@ -103,27 +103,27 @@ Processing by PlayerController#delete as */*
 Completed 500 Internal Server Error in 16ms
 
 
-  
+
 PG::SyntaxError (ERROR:  syntax error at or near "*"
 LINE 1: DELETE * FROM player WHERE id=1;
                ^
 ):
-  
+
 app/models/player.rb:43:in `exec'
 app/models/player.rb:43:in `delete'
 app/controllers/player_controller.rb:21:in `delete'
 Started GET "/js/Companies.js" for 127.0.0.1 at 2018-04-24 13:33:59 -0600
-  
+
 Started GET "/js/PersonForm.js" for 127.0.0.1 at 2018-04-24 13:33:59 -0600
 Started GET "/js/Person.js" for 127.0.0.1 at 2018-04-24 13:33:59 -0600
 ActionController::RoutingError (No route matches [GET] "/js/Companies.js"):
 Started GET "/js/PeopleList.js" for 127.0.0.1 at 2018-04-24 13:33:59 -0600
 Started GET "/js/People.js" for 127.0.0.1 at 2018-04-24 13:33:59 -0600
-  
-  
-  
-  
-  
+
+
+
+
+
 ActionController::RoutingError (No route matches [GET] "/js/PersonForm.js"):
 ActionController::RoutingError (No route matches [GET] "/js/Person.js"):
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
@@ -155,10 +155,10 @@ puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 ActionController::RoutingError (No route matches [GET] "/js/PeopleList.js"):
 ActionController::RoutingError (No route matches [GET] "/js/People.js"):
-  
-  
-  
-  
+
+
+
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
