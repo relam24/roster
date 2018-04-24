@@ -1,0 +1,11 @@
+Started GET "/player" for 127.0.0.1 at 2018-04-24 13:17:28 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 558ms (Views: 0.3ms)
+
+
+Started POST "/player" for 127.0.0.1 at 2018-04-24 13:21:41 -0600
+Processing by PlayerController#createOne as */*
+  Parameters: {"player_name"=>"somehjsdbs", "nickname"=>"jsdkns", "team"=>"djkfs", "status"=>"sjkdfn", "email"=>"skdjs", "phone"=>"sjd", "player"=>{"player_name"=>"somehjsdbs", "nickname"=>"jsdkns", "team"=>"djkfs", "status"=>"sjkdfn", "email"=>"skdjs", "phone"=>"sjd"}}
+Completed 200 OK in 21ms (Views: 0.6ms)
+
+
