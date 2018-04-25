@@ -6,11 +6,19 @@ body {
 	position: relative;
 	background-color: black;
 	color: white;
-
 }
 
 h1 {
 	background-color: blue;
+}
+
+.header {
+	height: 300px;
+	width: 100%;
+	background-image:url(https://images.unsplash.com/photo-1441441975082-af1c1cf58adb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55d135a8e78d769570fcbf853307407a&auto=format&fit=crop&w=800&q=60);
+	background-position: center;
+	background-size: cover;
+
 }
 
 .container {
@@ -38,13 +46,18 @@ table {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
+	border: solid 6px rgb(75,145,190);
+}
+
+td {
+	border: solid rgb(224,223,224);
 }
 
 tr {
 	width: 80%;
 	position: relative;
 	flex-direction: row;
-	background-color: green;
+	background-color: black;
 	justify-content: center;
 	align-self: center;
 	align-items: center;
@@ -55,6 +68,7 @@ tr {
 	position: relative;
 	padding: 0px;
 	margin: 0px;
+	border-color: rgb(75,145,190);
 }
 
 .player {
