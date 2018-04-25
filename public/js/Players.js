@@ -20,7 +20,6 @@ class Players extends React.Component {
 
 	componentDidMount () {
 		this.getPlayers();
-
 	}
 	deletePlayer (player, index) {
 		fetch('player/' + player.id, {
@@ -97,7 +96,7 @@ class Players extends React.Component {
 	render () {
 		console.log(this.state.players); // get players is not being called or setting state
 		return (
-			<div>
+			<div class="box">
 				<h2> Players </h2>
 				{ this.state.playersListIsVisible
 					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
