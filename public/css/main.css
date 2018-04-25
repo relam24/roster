@@ -1,0 +1,38 @@
+.container {
+	display: flex;
+	background-color: black;
+	color: white;
+
+}
+
+h1 {
+	background-color: blue;
+}
+
+h2 {
+	background-color: purple;
+}
+
+.player {
+	background-color: red;
+}
+
+.edit {
+	background-color: pink;
+}
+
+.delete {
+	background-color: green;
+}
+
+form {
+	background-color: orange;
+}
+
+.playername {
+	background-color: blue;
+}
+
+p {
+	background-color: green;
+}
