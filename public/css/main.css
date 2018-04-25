@@ -9,15 +9,17 @@ body {
 }
 
 h1 {
-	background-color: blue;
+	background-color: black;
+	text-align: center;
 }
 
 .header {
-	height: 300px;
+	height: 340px;
 	width: 100%;
-	background-image:url(https://images.unsplash.com/photo-1441441975082-af1c1cf58adb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55d135a8e78d769570fcbf853307407a&auto=format&fit=crop&w=800&q=60);
+	background-image:url(https://images.pexels.com/photos/415261/pexels-photo-415261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 	background-position: center;
 	background-size: cover;
+	border-radius: 8px;
 
 }
 
