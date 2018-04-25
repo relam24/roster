@@ -17,7 +17,8 @@ class Players extends React.Component {
 		this.handleCreateSubmit = this.handleCreateSubmit.bind(this);
 		this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
 	}
-	compenentDidMount () {
+
+	componentDidMount () {
 		this.getPlayers();
 
 	}
@@ -36,16 +37,14 @@ class Players extends React.Component {
 	getPlayers () {
 		fetch('/player')
 		.then(response => response.json())
-		.then(data => {
-			this.setState({
-				players: data
-			});
-		})
+		.then(data => {this.setState({players: data})})
 		.catch(error => console.log(error));
 	}
+
 	getPlayer (player) {
 		this.setState({player: player});
 	}
+
 	handleCreate (player) {
 		const updatedPlayers = this.state.people;
 		updatedPlayers.unshift(person);
