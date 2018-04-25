@@ -17,12 +17,12 @@ class PlayersList extends React.Component {
 							<td onClick={() => {
 								this.props.toggleState('playersListIsVisible', 'playerIsVisible'); this.props.getPlayer(player);
 							}}>
-								<button className="button is-warning is-small">Edit</button>
+								<button className="edit">Edit</button>
 							</td>
 							<td onClick={() => {
 								this.props.deletePlayer(player, index);
 							}}>
-								<button className="button is-danger is-small">Delete</button>
+								<button className="delete">Delete</button>
 							</td>
 						</tr>;
 					})}
