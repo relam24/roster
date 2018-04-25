@@ -417,3 +417,18 @@ puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 >>>>>>> 218f58d48bfc281488bcebd33175db6d1cdbe6d5
+Started GET "/player" for 127.0.0.1 at 2018-04-25 10:52:00 -0400
+Processing by PlayerController#index as */*
+Completed 200 OK in 277ms (Views: 4.3ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-25 10:52:24 -0400
+Processing by PlayerController#index as */*
+Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-25 10:57:42 -0400
+Processing by PlayerController#index as */*
+Completed 200 OK in 6ms (Views: 4.6ms)
+
+
