@@ -17,8 +17,10 @@ class Players extends React.Component {
 		this.handleCreateSubmit = this.handleCreateSubmit.bind(this);
 		this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
 	}
-	compenentDidMount () {
+
+	componentDidMount () {
 		this.getPlayers();
+
 	}
 	deletePlayer (player, index) {
 		fetch('player/' + player.id, {
@@ -27,7 +29,7 @@ class Players extends React.Component {
 			this.setState({
 				players: [
 					...this.state.players.slice(0, index),
-					...this.state.people.slice(index + 1)
+					...this.state.players.slice(index + 1)
 				]
 			});
 		});
@@ -35,19 +37,17 @@ class Players extends React.Component {
 	getPlayers () {
 		fetch('/player')
 		.then(response => response.json())
-		.then(data => {
-			this.setState({
-				players: data
-			});
-		})
+		.then(data => {this.setState({players: data})})
 		.catch(error => console.log(error));
 	}
+
 	getPlayer (player) {
 		this.setState({player: player});
 	}
+
 	handleCreate (player) {
-		const updatedPlayers = this.state.people;
-		updatedPlayers.unshift(person);
+		const updatedPlayers = this.state.players;
+		updatedPlayers.unshift(player);
 		this.setState({
 			players: updatedPlayers
 		});
@@ -71,7 +71,7 @@ class Players extends React.Component {
 		.catch(error => console.log(error));
 	}
 	handleUpdateSubmit (player) {
-		fetch('/player' + player.id, {
+		fetch('/player/' + player.id, {
 			body: JSON.stringify(player),
 			method: 'PUT',
 			headers: {
@@ -95,6 +95,7 @@ class Players extends React.Component {
 		});
 	}
 	render () {
+		console.log(this.state.players); // get players is not being called or setting state
 		return (
 			<div>
 				<h2> Players </h2>
@@ -102,7 +103,8 @@ class Players extends React.Component {
 					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
 						>Add A Player</button> : '' }
 				{ this.state.playersListIsVisible
-					? <PlayerList toggleState={this.toggleState}
+					? <PlayersList
+						toggleState={this.toggleState}
 						players={this.state.players}
 						getPlayer={this.getPlayer}
 						deletePlayer={this.deletePlayer}
@@ -110,6 +112,7 @@ class Players extends React.Component {
 				{ this.state.addPlayerIsVisible
 					? <PlayerForm
 						toggleState={this.toggleState}
+						handleCreate={this.handleCreate}
 						handleSubmit={this.handleCreateSubmit}
 						/> : ''}
 				{this.state.playerIsVisible

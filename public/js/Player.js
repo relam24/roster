@@ -15,7 +15,8 @@ class Player extends React.Component {
 						</div>
 					</div>
 				</div>
-				<PlayerForm />
+				<PlayerForm player={this.props.player} handleSubmit={this.props.handleSubmit}
+				/>
 			</div>
 		);
 	}
