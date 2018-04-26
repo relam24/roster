@@ -7,13 +7,11 @@ class Player
     def initialize(opts)
         @id = opts["id"].to_i
         @player_name = opts["player_name"]
-        @nickname = opts["nickname"]
-        @team = opts["team"]
-        @status = opts["status"]
         if opts["nickname"]
             @nickname = opts["nickname"]
         end
         @team = opts["team"]
+        @status = opts["status"]
         @email = opts["email"]
         @phone = opts["phone"]
     end
@@ -40,7 +38,7 @@ class Player
     end
 
     def self.delete(id)
-        results = DB.exec("DELETE * FROM player WHERE id=#{id};")
+        results = DB.exec("DELETE FROM player WHERE id=#{id};")
         return {deleted:true}
     end
 
@@ -48,7 +46,7 @@ class Player
         results = DB.exec(
             <<-SQL
             UPDATE player
-            SET player_name='#{opts["player_name"]}', nickname='#{opts["nickname"]}', team='#{opts["team"]}', status='#{opts[status]}', email='#{opts["email"]}', phone='#{opts[phone]}'
+            SET player_name='#{opts["player_name"]}', nickname='#{opts["nickname"]}', team='#{opts["team"]}', status='#{opts["status"]}', email='#{opts["email"]}', phone='#{opts["phone"]}'
             WHERE id=#{id}
             RETURNING id, player_name, nickname, team, status, email, phone
             SQL

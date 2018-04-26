@@ -32,50 +32,64 @@ class PlayerForm extends React.Component {
 	}
 	handleSubmit (event) {
 		event.preventDefault();
+        console.log(this.state);
 		this.props.handleSubmit(this.state);
 	}
 	render () {
+        console.log(this.props);
 		return (
 			<div>
 				<form onSubmit={this.handleSubmit}>
 					<label for="player_name">Player Name</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="player_name"
 							onChange={this.handleChange}
 							value={this.state.player_name}
                         />
 					</div>
 					<label for="nickname">Nickname</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="nickname"
 							onChange={this.handleChange}
 							value={this.state.nickname}
                         />
 					</div>
 					<label for="team">Team</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="team"
 							onChange={this.handleChange}
 							value={this.state.team}
                         />
 					</div>
 					<label for="status">Status</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="status"
 							onChange={this.handleChange}
 							value={this.state.status}
                         />
 					</div>
 					<label for="email">Email</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="email"
 							onChange={this.handleChange}
 							value={this.state.email}
                         />
 					</div>
 					<label for="phone">Phone</label>
 					<div>
-						<input type="text"
+						<input
+							type="text"
+							id="phone"
 							onChange={this.handleChange}
 							value={this.state.phone}
                         />
@@ -84,9 +98,9 @@ class PlayerForm extends React.Component {
 						<input type="submit"
                         />
 					</div>
+					<button onClick={() =>
+	                   this.props.toggleState('playersListIsVisible', 'addPlayerIsVisible')}>Cancel</button>
 				</form>
-				<button onClick={() =>
-                    this.props.toggleState('addPlayerIsVisible', 'playersListIsVisible')}>Cancel</button>
 			</div>
 		);
 	}

@@ -1,3 +1,4 @@
+
 class PlayersList extends React.Component {
 	render () {
       // console.log(this.props.players);

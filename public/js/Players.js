@@ -28,7 +28,7 @@ class Players extends React.Component {
 			this.setState({
 				players: [
 					...this.state.players.slice(0, index),
-					...this.state.people.slice(index + 1)
+					...this.state.players.slice(index + 1)
 				]
 			});
 		});
@@ -47,8 +47,8 @@ class Players extends React.Component {
 	}
 
 	handleCreate (player) {
-		const updatedPlayers = this.state.people;
-		updatedPlayers.unshift(person);
+		const updatedPlayers = this.state.players;
+		updatedPlayers.unshift(player);
 		this.setState({
 			players: updatedPlayers
 		});
@@ -72,7 +72,7 @@ class Players extends React.Component {
 		.catch(error => console.log(error));
 	}
 	handleUpdateSubmit (player) {
-		fetch('/player' + player.id, {
+		fetch('/player/' + player.id, {
 			body: JSON.stringify(player),
 			method: 'PUT',
 			headers: {
@@ -104,7 +104,8 @@ class Players extends React.Component {
 					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
 						>Add A Player</button> : '' }
 				{ this.state.playersListIsVisible
-					? <PlayersList toggleState={this.toggleState}
+					? <PlayersList
+						toggleState={this.toggleState}
 						players={this.state.players}
 						getPlayer={this.getPlayer}
 						deletePlayer={this.deletePlayer}
@@ -112,6 +113,7 @@ class Players extends React.Component {
 				{ this.state.addPlayerIsVisible
 					? <PlayerForm
 						toggleState={this.toggleState}
+						handleCreate={this.handleCreate}
 						handleSubmit={this.handleCreateSubmit}
 						/> : ''}
 				{this.state.playerIsVisible
