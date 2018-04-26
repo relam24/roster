@@ -42,7 +42,9 @@ class Players extends React.Component {
 	getPlayers () {
 		fetch('/player')
 		.then(response => response.json())
-		.then(data => {this.setState({players: data})})
+		.then(data => {
+			this.setState({players: data});
+		})
 		.catch(error => console.log(error));
 	}
 
@@ -172,9 +174,9 @@ class Players extends React.Component {
 		   			? <button onClick={() =>
 		   			this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
 					>Cancel</button> : ''}
-				<h2> Players </h2>
+				<h2 className="title"> Players </h2>
 				{ this.state.playersListIsVisible
-					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
+					? <button className="addplayer" onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
 						>Add A Player</button> : '' }
 				{ this.state.playersListIsVisible
 					? <PlayersList

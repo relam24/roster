@@ -12,19 +12,17 @@ class PlayersList extends React.Component {
 							}}>
 								<h2>{player.player_name}</h2>
 							</td>
-							<td className="player">
+							<td className="playerstatus">
 								<h3> {player.status} </h3>
 							</td>
-							<td onClick={() => {
-								this.props.toggleState('playersListIsVisible', 'playerIsVisible'); this.props.getPlayer(player);
-							}}>
-								<button className="edit">Edit</button>
-							</td>
-							<td onClick={() => {
-								this.props.deletePlayer(player, index);
-							}}>
-								<button className="delete">Delete</button>
-							</td>
+							<button className="edit"
+								onClick={() => {
+									this.props.toggleState('playersListIsVisible', 'playerIsVisible'); this.props.getPlayer(player);
+								}}>Edit</button>
+							<button className="delete"
+								onClick={() => {
+									this.props.deletePlayer(player, index);
+								}}>Delete</button>
 						</tr>;
 					})}
 				</tbody>
