@@ -24,6 +24,7 @@ h1 {
 	color: white;
 	font-family: 'Trade Winds', cursive;
 	border-radius: 8px;
+	height: 320px;
 }
 
 .header {
@@ -119,5 +120,5 @@ form {
 	color: black;
 	font-family: 'Trade Winds', cursive;
 	border-radius: 8px;
-	opacity: 0.5;
+	opacity: 1.0;
 }

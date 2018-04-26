@@ -32,7 +32,7 @@ class PlayerForm extends React.Component {
 	}
 	handleSubmit (event) {
 		event.preventDefault();
-        console.log(this.state);
+		console.log(this.state);
 		this.props.handleSubmit(this.state);
 	}
 	render () {
@@ -99,7 +99,7 @@ class PlayerForm extends React.Component {
                         />
 					</div>
 					<button onClick={() =>
-	                   this.props.toggleState('playersListIsVisible', 'addPlayerIsVisible')}>Cancel</button>
+						this.props.toggleState('playersListIsVisible', 'addPlayerIsVisible')}>Cancel</button>
 				</form>
 			</div>
 		);
