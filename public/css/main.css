@@ -1,16 +1,76 @@
-.container {
+body {
 	display: flex;
+	flex-direction: column;
+	flex-flow: column;
+	flex-wrap: wrap;
+	position: relative;
 	background-color: black;
 	color: white;
-
 }
 
 h1 {
-	background-color: blue;
+	background-color: black;
+	text-align: center;
 }
 
-h2 {
-	background-color: purple;
+.header {
+	height: 340px;
+	width: 100%;
+	background-image:url(https://images.pexels.com/photos/415261/pexels-photo-415261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-position: center;
+	background-size: cover;
+	border-radius: 8px;
+
+}
+
+.container {
+	width: 80%;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	flex-flow: column;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.box {
+	width: 100%;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+table {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: solid 6px rgb(75,145,190);
+}
+
+td {
+	border: solid rgb(224,223,224);
+}
+
+tr {
+	width: 80%;
+	position: relative;
+	flex-direction: row;
+	background-color: black;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	flex-flow: row;
+	flex-wrap: wrap;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	border-color: rgb(75,145,190);
 }
 
 .player {
