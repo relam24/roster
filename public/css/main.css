@@ -47,15 +47,14 @@ h1 {
 }
 
 table {
-	width: 100%;
+	width: 75%;
 	margin: 0px;
 	padding: 0px;
-	border: solid 6px rgb(75,145,190);
 	font-family: 'Trade Winds', cursive;
 }
 
-tr {
-	width: 80%;
+td {
+	width: 100%;
 	position: relative;
 	flex-direction: row;
 	background-color: black;
@@ -69,7 +68,6 @@ tr {
 	position: relative;
 	padding: 0px;
 	margin: 0px;
-	border-color: rgb(75,145,190);
 }
 
 .player {
@@ -89,11 +87,12 @@ tr {
 }
 
 form {
-	background-color: orange;
+	background-color: rgb(75,145,190);
 	font-family: 'Trade Winds', cursive;
 }
 
 .playerinfo {
-	background-color: green;
+	background-color: black;
+	color: white;
 	font-family: 'Trade Winds', cursive;
 }
