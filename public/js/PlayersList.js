@@ -12,7 +12,7 @@ class PlayersList extends React.Component {
 							}}>
 								<h2>{player.player_name}</h2>
 							</td>
-							<td className="player">
+							<td className="playerstatus">
 								<h3> {player.status} </h3>
 							</td>
 							<button className="edit"

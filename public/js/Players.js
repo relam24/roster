@@ -99,9 +99,9 @@ class Players extends React.Component {
 		console.log(this.state.players); // get players is not being called or setting state
 		return (
 			<div class="box">
-				<h2> Players </h2>
+				<h2 className="title"> Players </h2>
 				{ this.state.playersListIsVisible
-					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
+					? <button className="addplayer" onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
 						>Add A Player</button> : '' }
 				{ this.state.playersListIsVisible
 					? <PlayersList
