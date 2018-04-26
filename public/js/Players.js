@@ -2,7 +2,11 @@ class Players extends React.Component {
 	constructor (props) {
 		super(props);
 		this.state = {
+			userFormIsVisbile: true,
+			loginButtonIsVisbile: true,
 			playersListIsVisible: true,
+			addUserIsVisible: false,
+			loginUserIsVisible: false,
 			addPlayerIsVisible: false,
 			playerIsVisible: false,
 			editPlayerIsVisible: false,
@@ -16,6 +20,8 @@ class Players extends React.Component {
 		this.handleCreate = this.handleCreate.bind(this);
 		this.handleCreateSubmit = this.handleCreateSubmit.bind(this);
 		this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
+		this.handleCreateUserSubmit = this.handleCreateUserSubmit.bind(this);
+		this.handleCreateLoginSubmit = this.handleCreateLoginSubmit.bind(this);
 	}
 
 	componentDidMount () {
@@ -44,6 +50,20 @@ class Players extends React.Component {
 		this.setState({player: player});
 	}
 
+	handleUserCreate (user) {
+		const updatedUser = this.state.user
+		updatedUser.push(user)
+		this.setState({user: updatedUser})
+	}
+
+
+	handleLoginCreate (login) {
+		const updatedLogin = this.state.login
+		updatedLogin.push(login)
+		this.setState({login: updatedLogin})
+	}
+
+
 	handleCreate (player) {
 		const updatedPlayers = this.state.players;
 		updatedPlayers.unshift(player);
@@ -51,6 +71,45 @@ class Players extends React.Component {
 			players: updatedPlayers
 		});
 	}
+
+
+	
+		handleCreateUserSubmit (user) {
+			fetch('/user' , {
+				body: JSON.stringify(user),
+				method: 'POST',
+				headers: {
+					'Aceept': 'application/json, text/plain, */*',
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(createdUser => {
+				return createdUser.json()
+			})
+			.then(jsonedUser => {
+				this.handleUserCreate(jsonedUser)
+				this.toggleState('addUserIsVisible', 'playersListIsVisible')
+			})
+			.catch(error => console.log(error))
+		}
+
+		handleCreateLoginSubmit (login) {
+			fetch('/login' , {
+				body: JSON.stringify(login),
+				method: 'POST',
+				headers: {
+					'Aceept': 'application/json, text/plain, */*',
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(jsonedLogin => {
+				this.handleLoginCreate(jsonedLogin)
+				this.toggleState('loginUserIsVisible', 'playersListIsVisible')
+			})
+			.catch(error => console.log(error))
+		}
+
+
 	handleCreateSubmit (player) {
 		fetch('/player', {
 			body: JSON.stringify(player),
@@ -97,6 +156,22 @@ class Players extends React.Component {
 		console.log(this.state.players); // get players is not being called or setting state
 		return (
 			<div class="box">
+				{!this.state.addUserIsVisible ?
+					 this.state.userFormIsVisbile
+						? <button onClick={() =>
+						this.toggleState('addUserIsVisible', 'playersListIsVisible')}
+						>Create New Account</button> : '' : this.state.userFormIsVisbile
+   						? <button onClick={() =>
+   						this.toggleState('addUserIsVisible', 'playersListIsVisible')}
+   						>Cancel</button> : ''}
+				{!this.state.loginUserIsVisible ?
+					this.state.loginButtonIsVisbile
+					? <button onClick={() =>
+					this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
+					>Login</button> : '' : this.state.loginButtonIsVisbile
+		   			? <button onClick={() =>
+		   			this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
+					>Cancel</button> : ''}
 				<h2> Players </h2>
 				{ this.state.playersListIsVisible
 					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
@@ -119,6 +194,18 @@ class Players extends React.Component {
 						toggleState={this.toggleState}
 						player={this.state.player}
 						handleSubmit={this.handleUpdateSubmit}
+						/> : ''}
+				{this.state.addUserIsVisible
+					? <UserForm
+						toggleState={this.toggleState}
+						handleCreate={this.handleUserCreate}
+						handleSubmit={this.handleCreateUserSubmit}
+						/> : ''}
+				{this.state.loginUserIsVisible
+					? <LoginForm
+						toggleState={this.toggleState}
+						handleCreate={this.handleLoginCreate}
+						handleSubmit={this.handleCreateLoginSubmit}
 						/> : ''}
 			</div>
 		);
