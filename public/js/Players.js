@@ -36,7 +36,9 @@ class Players extends React.Component {
 	getPlayers () {
 		fetch('/player')
 		.then(response => response.json())
-		.then(data => {this.setState({players: data})})
+		.then(data => {
+			this.setState({players: data});
+		})
 		.catch(error => console.log(error));
 	}
 

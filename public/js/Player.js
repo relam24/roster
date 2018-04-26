@@ -3,8 +3,8 @@ class Player extends React.Component {
 		return (
 			<div>
 				<div>
-					<div>
-						<h2><span>Name:</span> {this.props.player.player_name} </h2>
+					<div className="playerinfo">
+						<h2> {this.props.player.player_name} </h2>
 						<p><span>Nickame:</span> {this.props.player.nickname}</p>
 						<p><span>Team:</span> {this.props.player.team}</p>
 						<p><span>Status:</span> {this.props.player.status} </p>

@@ -14,16 +14,14 @@ class PlayersList extends React.Component {
 							<td className="player">
 								<h3> {player.status} </h3>
 							</td>
-							<td onClick={() => {
-								this.props.toggleState('playersListIsVisible', 'playerIsVisible'); this.props.getPlayer(player);
-							}}>
-								<button className="edit">Edit</button>
-							</td>
-							<td onClick={() => {
-								this.props.deletePlayer(player, index);
-							}}>
-								<button className="delete">Delete</button>
-							</td>
+							<button className="edit"
+								onClick={() => {
+									this.props.toggleState('playersListIsVisible', 'playerIsVisible'); this.props.getPlayer(player);
+								}}>Edit</button>
+							<button className="delete"
+								onClick={() => {
+									this.props.deletePlayer(player, index);
+								}}>Delete</button>
 						</tr>;
 					})}
 				</tbody>
