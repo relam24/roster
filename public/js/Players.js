@@ -42,7 +42,9 @@ class Players extends React.Component {
 	getPlayers () {
 		fetch('/player')
 		.then(response => response.json())
-		.then(data => {this.setState({players: data})})
+		.then(data => {
+			this.setState({players: data});
+		})
 		.catch(error => console.log(error));
 	}
 
@@ -73,7 +75,7 @@ class Players extends React.Component {
 	}
 
 
-	
+
 		handleCreateUserSubmit (user) {
 			fetch('/user' , {
 				body: JSON.stringify(user),
@@ -156,25 +158,25 @@ class Players extends React.Component {
 		console.log(this.state.players); // get players is not being called or setting state
 		return (
 			<div class="box">
-				{!this.state.addUserIsVisible ?
-					 this.state.userFormIsVisbile
-						? <button onClick={() =>
-						this.toggleState('addUserIsVisible', 'playersListIsVisible')}
-						>Create New Account</button> : '' : this.state.userFormIsVisbile
-   						? <button onClick={() =>
-   						this.toggleState('addUserIsVisible', 'playersListIsVisible')}
-   						>Cancel</button> : ''}
-				{!this.state.loginUserIsVisible ?
-					this.state.loginButtonIsVisbile
+			{!this.state.addUserIsVisible ?
+				 this.state.userFormIsVisbile
 					? <button onClick={() =>
-					this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
-					>Login</button> : '' : this.state.loginButtonIsVisbile
-		   			? <button onClick={() =>
-		   			this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
+					this.toggleState('addUserIsVisible', 'playersListIsVisible')}
+					>Create New Account</button> : '' : this.state.userFormIsVisbile
+					? <button onClick={() =>
+					this.toggleState('addUserIsVisible', 'playersListIsVisible')}
 					>Cancel</button> : ''}
-				<h2> Players </h2>
+			{!this.state.loginUserIsVisible ?
+				this.state.loginButtonIsVisbile
+				? <button onClick={() =>
+				this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
+				>Login</button> : '' : this.state.loginButtonIsVisbile
+				? <button onClick={() =>
+				this.toggleState('loginUserIsVisible', 'playersListIsVisible')}
+				>Cancel</button> : ''}
+				<h2 className="title"> Players </h2>
 				{ this.state.playersListIsVisible
-					? <button onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
+					? <button className="addplayer" onClick={() => this.toggleState('addPlayerIsVisible', 'playersListIsVisible')}
 						>Add A Player</button> : '' }
 				{ this.state.playersListIsVisible
 					? <PlayersList
