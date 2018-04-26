@@ -19,6 +19,13 @@ h1 {
 	border-radius: 8px;
 }
 
+.playerinfo {
+	background-color: black;
+	color: white;
+	font-family: 'Trade Winds', cursive;
+	border-radius: 8px;
+}
+
 .header {
 	height: 330px;
 	width: 100%;
@@ -26,6 +33,7 @@ h1 {
 	background-position: center;
 	background-size: cover;
 	border-radius: 8px;
+	border: solid 2px gray;
 
 }
 
@@ -107,12 +115,9 @@ td {
 }
 
 form {
-	background-color: rgb(75,145,190);
+	background-color: gray;
+	color: black;
 	font-family: 'Trade Winds', cursive;
-}
-
-.playerinfo {
-	background-color: black;
-	color: white;
-	font-family: 'Trade Winds', cursive;
+	border-radius: 8px;
+	opacity: 0.5;
 }
