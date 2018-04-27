@@ -6,4 +6,11 @@ get '/player/:id', to: 'player#show'
 post '/player', to: 'player#createOne'
 delete '/player/:id', to: 'player#delete'
 put '/player/:id', to: 'player#update'
+
+
+post 'users/login', to: 'users#login'
+get '/users', to: 'users#index'
+post '/users', to: 'users#create'
+put '/users/:id', to: 'users#update'
+delete 'users/:id', to: 'users#delete'
 end
