@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+    skip_before_action :verify_authenticity_token
   # before_action :set_user, only: [:show, :update, :destroy]
   # before_action :authenticate_token, except: [:login, :create]
   # before_action :authorize_user, except: [:login, :create, :index]
   # require 'jwt'
 
   def login
-      render json: {status: 200, user: user}
+      render json: User.create(params["username"], params["password_digest"])
     #     user = User.find_by(username: params[:user][:username])
     #     if user && user.authenticate(params[:user][:password])
     #         # token = create_token(user.id, user.username)
@@ -29,13 +30,13 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    render json: User.create(user_params)
 
-    if @user.save
-      render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
+    # if @user.save
+    #   render json: @user, status: :created, location: @user
+    # else
+    #   render json: @user.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /users/1
@@ -60,7 +61,7 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password_digest)
     end
 
 

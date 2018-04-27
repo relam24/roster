@@ -1,4 +1,4 @@
-class User
+class User < ApplicationRecord
     has_secure_password
 
     attr_reader :id, :username, :password_digest
@@ -19,7 +19,7 @@ class User
             RETURNING id, username, password_digest;
             SQL
         )
-        return Player.new(results.first)
+        return results.first
     end
 
 end
