@@ -5,6 +5,8 @@ class PlayersList extends React.Component {
 		return (
 			<table>
 				<tbody>
+				<button onClick={() =>
+					this.props.toggleState('playersListIsVisible')}>Cancel</button>
 					{this.props.players.map((player, index) => {
 						return <tr>
 							<td onClick={() => {

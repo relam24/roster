@@ -5,7 +5,7 @@ body {
 	flex-wrap: wrap;
 	position: relative;
 	background-color: black;
-	color: white;
+	color: rgb(205,205,205);
 	font-family: 'Trade Winds', cursive;
 	background-image: url(https://images.unsplash.com/photo-1423068657086-889315a2eba8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3909b6e24b62c8157af7b79f63ab0f32&auto=format&fit=crop&w=1950&q=80);
 	background-repeat: no-repeat;
@@ -21,7 +21,7 @@ h1 {
 
 .playerinfo {
 	background-color: black;
-	color: white;
+	color: rgb(205,205,205);
 	font-family: 'Trade Winds', cursive;
 	border-radius: 8px;
 	height: 280px;
@@ -51,7 +51,7 @@ h1 {
 
 .addplayer {
 	background-color: black;
-	color: white;
+	color: rgb(205,205,205);
 }
 
 button {
@@ -105,18 +105,18 @@ td {
 
 .edit {
 	background-color: black;
-	color: white;
+	color: rgb(205,205,205);
 	font-family: 'Trade Winds', cursive;
 }
 
 .delete {
 	background-color: black;
-	color: white;
+	color: rgb(205,205,205);
 	font-family: 'Trade Winds', cursive;
 }
 
 form {
-	background-color: gray;
+	background-color: rgb(205,205,205);
 	color: black;
 	font-family: 'Trade Winds', cursive;
 	border-radius: 8px;
