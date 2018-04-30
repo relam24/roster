@@ -2,8 +2,8 @@ class Team
     attr_reader :id, :team_name, :roster
 
 
-    if(ENV['DATABASE_URL'])
-       uri = URI.parse(ENV['DATABASE_URL'])
+    if(ENV['https://git.heroku.com/heroku-roster.git'])
+       uri = URI.parse(ENV['https://git.heroku.com/heroku-roster.git'])
        DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
    else
        DB = PG.connect(host: "localhost", port: 5432, dbname: 'roster')
