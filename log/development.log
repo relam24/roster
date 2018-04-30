@@ -1895,3 +1895,162 @@ Processing by PlayerController#index as */*
 Completed 200 OK in 4ms (Views: 3.2ms)
 
 
+Started GET "/player" for 127.0.0.1 at 2018-04-29 04:48:17 -0600
+Started GET "/teams" for 127.0.0.1 at 2018-04-29 04:48:17 -0600
+Processing by PlayerController#index as */*
+Processing by TeamsController#index as */*
+Completed 200 OK in 619ms (Views: 0.7ms)
+
+
+Completed 200 OK in 670ms (Views: 3.2ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:38:13 -0600
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:38:13 -0600
+Processing by TeamsController#index as */*
+Processing by PlayerController#index as */*
+Completed 200 OK in 673ms (Views: 0.4ms)
+
+
+Completed 200 OK in 623ms (Views: 3.9ms)
+
+
+Started PUT "/player/18" for 127.0.0.1 at 2018-04-30 12:38:31 -0600
+Processing by PlayerController#update as HTML
+  Parameters: {"player_name"=>"Emma Beny", "nickname"=>"", "status"=>"Social", "email"=>"emben1092@gmail.com", "phone"=>"2165092388", "id"=>"18", "player"=>{"player_name"=>"Emma Beny", "nickname"=>"", "status"=>"Social", "email"=>"emben1092@gmail.com", "phone"=>"2165092388", "id"=>"18"}}
+Completed 200 OK in 10ms (Views: 0.3ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:38:31 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 6ms (Views: 4.1ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:38:39 -0600
+Processing by TeamsController#index as */*
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:38:39 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 5ms (Views: 0.8ms)
+
+
+Completed 200 OK in 13ms (Views: 8.5ms)
+
+
+Started PUT "/player/18" for 127.0.0.1 at 2018-04-30 12:38:55 -0600
+Processing by PlayerController#update as HTML
+  Parameters: {"player_name"=>"Emma Beno", "nickname"=>"", "status"=>"Social", "email"=>"emben1092@gmail.com", "phone"=>"2165092388", "id"=>"18", "player"=>{"player_name"=>"Emma Beno", "nickname"=>"", "status"=>"Social", "email"=>"emben1092@gmail.com", "phone"=>"2165092388", "id"=>"18"}}
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:38:55 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 7ms (Views: 5.3ms)
+
+
+Started POST "/player" for 127.0.0.1 at 2018-04-30 12:39:10 -0600
+Processing by PlayerController#createOne as HTML
+  Parameters: {"player_name"=>"some", "nickname"=>"sd ", "team"=>"fd", "status"=>"sd", "email"=>"dsk", "phone"=>"sk", "player"=>{"player_name"=>"some", "nickname"=>"sd ", "team"=>"fd", "status"=>"sd", "email"=>"dsk", "phone"=>"sk"}}
+Completed 200 OK in 8ms (Views: 0.2ms)
+
+
+Started DELETE "/player/48" for 127.0.0.1 at 2018-04-30 12:39:15 -0600
+Processing by PlayerController#delete as */*
+  Parameters: {"id"=>"48"}
+Completed 200 OK in 3ms (Views: 0.4ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:41:21 -0600
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:41:21 -0600
+Processing by TeamsController#index as */*
+Processing by PlayerController#index as */*
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Completed 200 OK in 10ms (Views: 7.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2018-04-30 12:41:35 -0600
+Processing by TeamsController#create as HTML
+  Parameters: {"team_name"=>"ssdjd", "roster"=>{}, "team"=>{"team_name"=>"ssdjd", "roster"=>{}}}
+Completed 200 OK in 5ms (Views: 0.2ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:41:39 -0600
+Processing by TeamsController#index as */*
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:41:39 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Completed 200 OK in 13ms (Views: 9.7ms)
+
+
+Started PUT "/teams/32" for 127.0.0.1 at 2018-04-30 12:41:55 -0600
+Processing by TeamsController#update as HTML
+  Parameters: {"team_name"=>"uodated", "id"=>"32", "team"=>{"team_name"=>"uodated", "id"=>"32"}}
+Completed 200 OK in 5ms (Views: 0.7ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:41:55 -0600
+Processing by TeamsController#index as */*
+Completed 200 OK in 1ms (Views: 0.3ms)
+
+
+Started DELETE "/teams/32" for 127.0.0.1 at 2018-04-30 12:41:58 -0600
+Processing by TeamsController#delete as */*
+  Parameters: {"id"=>"32"}
+Completed 200 OK in 3ms (Views: 0.2ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 12:42:02 -0600
+Processing by TeamsController#index as */*
+Started GET "/player" for 127.0.0.1 at 2018-04-30 12:42:02 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 2ms (Views: 0.7ms)
+
+
+Completed 200 OK in 12ms (Views: 8.2ms)
+
+
+Started PUT "/player/19" for 127.0.0.1 at 2018-04-30 13:04:02 -0600
+Processing by PlayerController#update as HTML
+  Parameters: {"player_name"=>"Christine Bryan", "nickname"=>"B", "status"=>"Social", "email"=>"vizquelss@aol.com", "phone"=>"2167731706", "id"=>"19", "player"=>{"player_name"=>"Christine Bryan", "nickname"=>"B", "status"=>"Social", "email"=>"vizquelss@aol.com", "phone"=>"2167731706", "id"=>"19"}}
+Completed 200 OK in 3ms (Views: 0.3ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-30 13:04:02 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 21ms (Views: 19.2ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 13:04:11 -0600
+Processing by TeamsController#index as */*
+Started GET "/player" for 127.0.0.1 at 2018-04-30 13:04:11 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 3ms (Views: 0.5ms)
+
+
+Completed 200 OK in 7ms (Views: 5.2ms)
+
+
+Started PUT "/player/19" for 127.0.0.1 at 2018-04-30 13:04:26 -0600
+Processing by PlayerController#update as HTML
+  Parameters: {"player_name"=>"Christine Bryant", "nickname"=>"B", "status"=>"Social", "email"=>"vizquelss@aol.com", "phone"=>"2167731706", "id"=>"19", "player"=>{"player_name"=>"Christine Bryant", "nickname"=>"B", "status"=>"Social", "email"=>"vizquelss@aol.com", "phone"=>"2167731706", "id"=>"19"}}
+Completed 200 OK in 3ms (Views: 0.4ms)
+
+
+Started GET "/player" for 127.0.0.1 at 2018-04-30 13:04:26 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 5ms (Views: 2.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-04-30 13:04:33 -0600
+Processing by TeamsController#index as */*
+Started GET "/player" for 127.0.0.1 at 2018-04-30 13:04:33 -0600
+Processing by PlayerController#index as */*
+Completed 200 OK in 3ms (Views: 0.4ms)
+
+
+Completed 200 OK in 5ms (Views: 2.6ms)
+
+
