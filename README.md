@@ -1,6 +1,6 @@
 # Roster
 
-Roster Live Site https://teamrosterga.herokuapp.com/
+Roster Live Site https://heroku-roster.herokuapp.com/
 
 SUMMARY/DESCRIPTION: Roster is an app dedicated to all sports team that want to have an interactive way to see all teammates and players' info. Most teams including mine, use an excel sheet to keep tabs and that leads to a lot of unneeded data. Roster is a way to optimize that info and be able to quickly find what you are looking for.
 
